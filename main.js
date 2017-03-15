@@ -8,6 +8,9 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+// Enable easy auto updates directly from github
+const autoUpdater = require("electron-updater").autoUpdater
+
 app.setAppUserModelId("org.whispersystems.electron-quick-start")
 
 // Keep a global reference of the window object, if you don't, the window will

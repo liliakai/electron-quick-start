@@ -37,5 +37,8 @@
     "publish": [
       "github"
     ]
+  },
+  "dependencies": {
+    "electron-updater": "^1.8.2"
   }
 }
