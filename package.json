@@ -4,7 +4,10 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "build -mlw --dir",
+    "dist": "build -mlw",
+    "release": "build -mlw"
   },
   "repository": "https://github.com/liliakai/electron-quick-start",
   "keywords": [
@@ -14,9 +17,25 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": {
+    "name": "Lilia Kai",
+    "email": "liliakai@gmail.com"
+  },
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^1.4.1",
+    "electron-builder": "^15.2.0"
+  },
+  "build": {
+    "appId": "org.whispersystems.electron-quick-start",
+    "mac": {
+      "category": "public.app-category.social-networking"
+    },
+    "directories": {
+      "output": "pack"
+    },
+    "publish": [
+      "github"
+    ]
   }
 }
