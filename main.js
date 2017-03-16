@@ -44,6 +44,23 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
+  autoUpdater.addListener("update-available", function(event) {
+  });
+  autoUpdater.addListener("update-downloaded", function(event,   releaseNotes, releaseName, releaseDate, updateURL) {
+    autoUpdater.quitAndInstall();
+  });
+  autoUpdater.addListener("error", function(error) {
+
+  });
+  autoUpdater.addListener("checking-for-update", function(event) {
+
+  });
+  autoUpdater.addListener("update-not-available", function(event) {
+
+  });
+
+  autoUpdater.checkForUpdates()
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
